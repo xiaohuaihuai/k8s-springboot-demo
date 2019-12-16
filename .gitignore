@@ -1,9 +1,9 @@
 HELP.md
-
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-!target/k8s-spring-boot-demo-0.0.1-SNAPSHOT.jar
+!target/k8s-springboot-demo-0.0.1-SNAPSHOT.jar
 
 ### STS ###
 .apt_generated
