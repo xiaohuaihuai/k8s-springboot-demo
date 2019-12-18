@@ -32,7 +32,7 @@ spec:
       containers:
       - name: k8s-springboot-demo
         image: yangqiuhua/k8s-springboot-demo:latest
-        imagePullPolicy: IfNotPresent
+        #imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8090
         env:
@@ -40,3 +40,13 @@ spec:
           value: "8090"
         - name: logging.level.root
           value: "DEBUG"
+        - name: logging.file.name
+          value: "/data/k8s-springboot-demo/logs/k8s-springboot-demo.log"
+        volumeMounts:
+        - name: k8s-springboot-demo
+          mountPath: /data/k8s-springboot-demo/logs
+      volumes:
+      - name: k8s-springboot-demo
+        hostPath:
+          path: /data/k8s-springboot-demo/logs
+          type: DirectoryOrCreate
