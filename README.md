@@ -21,3 +21,11 @@
     或
 	$ docker run -d -p 8070:8090 -e server.port=8090 -e logging.level.root=DEBUG --name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
 ----
+
+## k8s deploy
+
+----
+    $ kubectl apply -f k8s-springboot-demo.yaml
+    或
+	$ kubectl create -f k8s-springboot-demo.yaml
+----
