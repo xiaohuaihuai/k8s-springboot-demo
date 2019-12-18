@@ -1,7 +1,6 @@
 FROM maven:3.5.4-jdk-8-alpine AS mvnbuild
-VOLUME /data/k8s-springboot-demo
-ADD ./src src/
-ADD ./pom.xml pom.xml
+ADD src src
+ADD pom.xml pom.xml
 RUN mvn clean package -Dmaven.test.skip=true
 
 FROM java:8
