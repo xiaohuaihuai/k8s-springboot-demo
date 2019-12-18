@@ -21,4 +21,14 @@ public class HelloController {
         return ResponseEntity.ok("hello,"+name);
     }
 
+    @RequestMapping("/helloWorld")
+    public ResponseEntity<String> helloWorld(){
+        logger.info("helloWorld");
+        logger.error("helloWorld");
+        logger.debug("helloWorld");
+        logger.warn("helloWorld");
+        logger.trace("helloWorld");
+        return ResponseEntity.ok("helloWorld");
+    }
+
 }
