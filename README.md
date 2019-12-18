@@ -19,5 +19,5 @@
 ----
     $ docker-compose up -d
     或
-	$ docker run -d -p 8080:8080 --name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
+	$ docker run -d -p 8070:8090 -e server.port=8090 -e logging.level.root=DEBUG --name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
 ----
