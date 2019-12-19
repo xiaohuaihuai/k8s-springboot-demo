@@ -10,5 +10,4 @@ MAINTAINER yangqiuhua
 LABEL author="yangqiuhua" since="2019-12-19"
 VOLUME /data/k8s-springboot-demo
 COPY --from=mvnbuild target/k8s-springboot-demo.jar /data/k8s-springboot-demo/k8s-springboot-demo.jar
-RUN bash -c "touch /data/k8s-springboot-demo/k8s-springboot-demo.jar"
 ENTRYPOINT ["java","-jar","/data/k8s-springboot-demo/k8s-springboot-demo.jar"]
