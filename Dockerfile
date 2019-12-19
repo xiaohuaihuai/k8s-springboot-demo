@@ -10,5 +10,5 @@ MAINTAINER yangqiuhua
 WORKDIR /data/k8s-springboot-demo
 VOLUME /data/k8s-springboot-demo
 COPY --from=mvnbuild /data/k8s-springboot-demo/target/k8s-springboot-demo.jar /data/k8s-springboot-demo/k8s-springboot-demo.jar
-RUN bash -c "touch k8s-springboot-demo.jar"
-ENTRYPOINT ["java","-jar","k8s-springboot-demo.jar"]
+RUN bash -c "touch /data/k8s-springboot-demo/k8s-springboot-demo.jar"
+ENTRYPOINT ["java","-jar","/data/k8s-springboot-demo/k8s-springboot-demo.jar"]
