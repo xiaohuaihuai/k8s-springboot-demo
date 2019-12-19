@@ -1,9 +1,11 @@
 version: '3'
 services:
   k8s-springboot-demo:
-    image: yangqiuhua/k8s-springboot-demo
+    image: yangqiuhua/k8s-springboot-demo:latest
+    container_name: k8s-springboot-demo
     ports:
       - "8070:8090"
     environment:
       - server.port=8090
       - logging.level.root=DEBUG
+      - logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log

@@ -19,13 +19,13 @@
 ----
     $ docker-compose up -d
     或
-	$ docker run -d -p 8070:8090 -e server.port=8090 -e logging.level.root=DEBUG --name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
+	$ docker run -d -p 8070:8090 -e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log --name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
 ----
 
 ## k8s deploy
 
 ----
-    $ kubectl apply -f k8s-springboot-demo.yaml
+    $ kubectl apply -f kubectl.yml
     或
-	$ kubectl create -f k8s-springboot-demo.yaml
+	$ kubectl create -f kubectl.yml
 ----

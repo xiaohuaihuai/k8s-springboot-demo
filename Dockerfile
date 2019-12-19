@@ -3,8 +3,9 @@ ADD src src
 ADD pom.xml pom.xml
 RUN mvn clean package -Dmaven.test.skip=true
 
+ARG APP_NAME=k8s-springboot-demo
 FROM java:8
-VOLUME /data/k8s-springboot-demo
-COPY --from=mvnbuild target/k8s-springboot-demo.jar k8s-springboot-demo.jar
-RUN bash -c 'touch k8s-springboot-demo.jar'
-ENTRYPOINT ["java","-jar","k8s-springboot-demo.jar"]
+VOLUME /data/$APP_NAME
+COPY --from=mvnbuild target/$APP_NAME.jar $APP_NAME.jar
+RUN bash -c "touch $APP_NAME.jar"
+ENTRYPOINT ["java","-jar","$APP_NAME.jar"]
