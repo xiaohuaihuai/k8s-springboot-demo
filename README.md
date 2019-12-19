@@ -19,9 +19,9 @@
 ----
     $ docker-compose up -d
     或
-	$ docker run -d -p 8070:8090 -v /e/data/k8s-springboot-demo:/data/k8s-springboot-demo \
+	$ docker run -p 8070:8090 -v /data/k8s-springboot-demo:/data/k8s-springboot-demo \
 	-e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log \
-	--name k8s-springboot-demo yangqiuhua/k8s-springboot-demo:latest
+	--name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
 ----
 
 ## k8s deploy
