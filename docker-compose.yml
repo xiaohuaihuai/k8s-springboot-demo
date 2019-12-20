@@ -9,5 +9,9 @@ services:
       - server.port=8090
       - logging.level.root=DEBUG
       - logging.file.name=/data/logs/k8s-springboot-demo/k8s-springboot-demo.log
+#linux 宿主机data目录挂载到容器data目录
 #    volumes:
 #      - "/data:/data"
+#windows 宿主机E盘data目录挂载到容器data目录
+#    volumes:
+#      - "E:\data:/data"
