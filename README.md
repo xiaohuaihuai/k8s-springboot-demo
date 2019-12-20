@@ -23,8 +23,8 @@
     -e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log \
     --name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
     
-	$ docker run -p 8070:8090 -v /data/k8s-springboot-demo:/data/k8s-springboot-demo \
-	-e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log \
+	$ docker run -p 8070:8090 -v /data:/data \
+	-e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/logs/k8s-springboot-demo/k8s-springboot-demo.log \
 	--name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
 ----
 

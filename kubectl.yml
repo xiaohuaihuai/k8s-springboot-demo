@@ -41,12 +41,12 @@ spec:
         - name: logging.level.root
           value: "DEBUG"
         - name: logging.file.name
-          value: "/data/k8s-springboot-demo/logs/k8s-springboot-demo.log"
+          value: "/data/logs/k8s-springboot-demo/k8s-springboot-demo.log"
         volumeMounts:
         - name: k8s-springboot-demo
-          mountPath: /data/k8s-springboot-demo
+          mountPath: /data
       volumes:
       - name: k8s-springboot-demo
         hostPath:
-          path: /data/k8s-springboot-demo
+          path: /data
           type: DirectoryOrCreate
