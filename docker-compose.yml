@@ -9,5 +9,5 @@ services:
       - server.port=8090
       - logging.level.root=DEBUG
       - logging.file.name=/data/k8s-springboot-demo/logs/k8s-springboot-demo.log
-    volumes:
-    - /data/k8s-springboot-demo:/data/k8s-springboot-demo
+#    volumes:
+#    - /data/k8s-springboot-demo:/data/k8s-springboot-demo:z
