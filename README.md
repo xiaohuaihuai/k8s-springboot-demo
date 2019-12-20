@@ -28,10 +28,8 @@
 	-e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/logs/k8s-springboot-demo/k8s-springboot-demo.log \
 	--name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
 	
-	#windows 宿主机E盘data目录挂载到容器data目录
-	$ docker run -p 8070:8090 -v E:\data:/data \
-	-e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/logs/k8s-springboot-demo/k8s-springboot-demo.log \
-	--name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
+	#windows cmd窗口 宿主机E盘data目录挂载到容器data目录
+	$ docker run -p 8070:8090 -v E:\data:/data -e server.port=8090 -e logging.level.root=DEBUG -e logging.file.name=/data/logs/k8s-springboot-demo/k8s-springboot-demo.log --name k8s-springboot-demo -d yangqiuhua/k8s-springboot-demo:latest
 ----
 
 ## k8s deploy
