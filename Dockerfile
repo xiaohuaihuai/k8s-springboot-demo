@@ -11,5 +11,5 @@ MAINTAINER yangqiuhua
 LABEL author="yangqiuhua" since="2019-12-19"
 WORKDIR /data/k8s-springboot-demo
 VOLUME /data/k8s-springboot-demo
-COPY --from=mvnbuild target/k8s-springboot-demo.jar k8s-springboot-demo.jar
+COPY --from=mvnbuild /data/k8s-springboot-demo/target/k8s-springboot-demo.jar k8s-springboot-demo.jar
 ENTRYPOINT ["java","-jar","k8s-springboot-demo.jar"]
