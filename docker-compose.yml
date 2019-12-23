@@ -14,4 +14,4 @@ services:
 #      - "/data/logs:/data/logs
 #windows 宿主机E盘data/logs目录挂载到容器data/logs目录
 #    volumes:
-#      - "E:\data\logs:/data/logs"
+#      - "E:\\data\\logs:/data/logs"
