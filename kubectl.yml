@@ -44,9 +44,9 @@ spec:
           value: "/data/logs/k8s-springboot-demo/k8s-springboot-demo.log"
         volumeMounts:
         - name: k8s-springboot-demo
-          mountPath: /data
+          mountPath: /data/logs
       volumes:
       - name: k8s-springboot-demo
         hostPath:
-          path: /data
+          path: /data/logs
           type: DirectoryOrCreate
