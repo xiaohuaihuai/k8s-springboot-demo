@@ -12,6 +12,6 @@ services:
 #linux 宿主机data/logs目录挂载到容器data/logs目录
 #    volumes:
 #      - "/data/logs:/data/logs
-#windows 宿主机E盘data/logs目录挂载到容器data/logs目录
+#windows 宿主机D盘data/logs目录挂载到容器data/logs目录
 #    volumes:
-#      - "E:\\data\\logs:/data/logs"
+#      - "D:\\data\\logs:/data/logs"
